@@ -30,7 +30,7 @@ function Card({
   };
 
   return (
-    <div>
+    <div data-testid={name}>
       <CardContainer trunfo={trunfo}>
         <CardTitle>{name}</CardTitle>
         <CardImage src={cardImage} alt={name} />

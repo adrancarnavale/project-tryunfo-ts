@@ -75,7 +75,7 @@ function GameForm() {
     if (
       +attribute1 > MAX_ATTRIBUTE_VALUE ||
       +attribute2 > MAX_ATTRIBUTE_VALUE ||
-      +attribute2 > MAX_ATTRIBUTE_VALUE
+      +attribute3 > MAX_ATTRIBUTE_VALUE
     )
       return true;
 
@@ -84,9 +84,6 @@ function GameForm() {
       +attribute2 < MIN_ATTRIBUTE_VALUE ||
       +attribute3 < MIN_ATTRIBUTE_VALUE
     )
-      return true;
-
-    if (+attribute1 + +attribute2 + +attribute3 > MAX_ATTRIBUTE_TOTAL_VALUE)
       return true;
 
     return false;
@@ -102,8 +99,8 @@ function GameForm() {
     <FormContainer>
       <StyledForm>
         <ElementContainer>
-          <label htmlFor="name">
-            Name:{' '}
+          <label>
+            <div>Name: </div>
             <input
               value={name}
               onChange={handleChange}
@@ -115,8 +112,8 @@ function GameForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="attribute1">
-            Attribute 01:{' '}
+          <label>
+            <div>Attribute 01: </div>
             <input
               value={attribute1}
               onChange={handleChange}
@@ -128,8 +125,8 @@ function GameForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="attribute2">
-            Attribute 02:{' '}
+          <label>
+            <div>Attribute 02: </div>
             <input
               value={attribute2}
               onChange={handleChange}
@@ -141,8 +138,8 @@ function GameForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="attribute3">
-            Attribute 03:{' '}
+          <label>
+            <div>Attribute 03: </div>
             <input
               value={attribute3}
               onChange={handleChange}
@@ -154,8 +151,8 @@ function GameForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="rarity">
-            Rarity:{' '}
+          <label>
+            <div>Rarity: </div>
             <select
               value={rarity}
               id="rarity"
@@ -171,8 +168,8 @@ function GameForm() {
 
         {!hasTrunfo && (
           <ElementContainer>
-            <label htmlFor="trunfo">
-              Trunfo:{' '}
+            <label>
+              <div>Trunfo: </div>
               <input
                 checked={trunfo}
                 onChange={handleChange}

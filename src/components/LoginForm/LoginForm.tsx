@@ -69,10 +69,9 @@ function LoginForm() {
     <FormContainer>
       <StyledForm>
         <ElementContainer>
-          <label htmlFor="name">
-            Name:{' '}
+          <label>
+            <div>Name:</div>
             <input
-              id="name"
               name="name"
               type="text"
               value={name}
@@ -82,10 +81,9 @@ function LoginForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="email">
-            Email:{' '}
+          <label>
+            <div>Email:</div>
             <input
-              id="email"
               name="email"
               type="text"
               value={email}
@@ -95,10 +93,9 @@ function LoginForm() {
         </ElementContainer>
 
         <ElementContainer>
-          <label htmlFor="password">
-            Password:{' '}
+          <label>
+            <div>Password:</div>
             <input
-              id="password"
               name="password"
               type="text"
               value={password}
